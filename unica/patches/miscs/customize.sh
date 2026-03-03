@@ -1,26 +1,26 @@
 SET_PROP_IF_DIFF "vendor" "ro.oem_unlock_supported" "0"
 
-# Better device/model detection in CoreRune
-SMALI_PATCH "system" "system/framework/framework.jar" \
-    "smali_classes6/com/samsung/android/rune/CoreRune.smali" "replace" \
-    '<clinit>()V' \
-    'ro.product.model' \
-    'ro.product.vendor.model'
-SMALI_PATCH "system" "system/framework/framework.jar" \
-    "smali_classes6/com/samsung/android/rune/CoreRune.smali" "replace" \
-    '<clinit>()V' \
-    'ro.product.device' \
-    'ro.product.vendor.device'
+LOG "- Disabling encryption"
+LINE=$(sed -n "/^\/dev\/block\/by-name\/userdata/=" "$WORK_DIR/vendor/etc/fstab.qcom")
+sed -i "${LINE}s/,fileencryption=aes-256-xts:aes-256-cts:v2//g" "$WORK_DIR/vendor/etc/fstab.qcom"
 
-# Disable RescueParty
-SMALI_PATCH "system" "system/framework/services.jar" \
-    "smali/com/android/server/RescueParty.smali" "return" \
-    '-$$Nest$smisDisabled()Z' \
-    'true'
+LOG_STEP_IN "- Downgrading VaultKeeper JNI"
+DELETE_FROM_WORK_DIR "system" "system/lib64/vendor.samsung.hardware.security.vaultkeeper-V1-ndk.so"
+ADD_TO_WORK_DIR "$TARGET_FIRMWARE" "system" "system/lib64/libvkjni.so" 0 0 644 "u:object_r:system_lib_file:s0"
+ADD_TO_WORK_DIR "$TARGET_FIRMWARE" "system" "system/lib64/libvkmanager.so" 0 0 644 "u:object_r:system_lib_file:s0"
+ADD_TO_WORK_DIR "$TARGET_FIRMWARE" "system" "system/lib64/vendor.samsung.hardware.security.vaultkeeper@2.0.so" 0 0 644 "u:object_r:system_lib_file:s0"
+LOG_STEP_OUT
 
-# Better model detection in FreecessController
-SMALI_PATCH "system" "system/framework/services.jar" \
-    "smali/com/android/server/am/FreecessController.smali" "replace" \
-    '<clinit>()V' \
-    'ro.product.model' \
-    'ro.product.vendor.model'
+LOG_STEP_IN "- Downgrading ENGMODE JNI"
+DELETE_FROM_WORK_DIR "system" "system/lib64/vendor.samsung.hardware.security.engmode-V1-ndk.so"
+ADD_TO_WORK_DIR "$TARGET_FIRMWARE" "system" "system/lib64/lib.engmode.samsung.so" 0 0 644 "u:object_r:system_lib_file:s0"
+ADD_TO_WORK_DIR "$TARGET_FIRMWARE" "system" "system/lib64/lib.engmodejni.samsung.so" 0 0 644 "u:object_r:system_lib_file:s0"
+ADD_TO_WORK_DIR "$TARGET_FIRMWARE" "system" "system/lib64/vendor.samsung.hardware.security.engmode@1.0.so" 0 0 644 "u:object_r:system_lib_file:s0"
+LOG_STEP_OUT
+
+#Nuke Shit
+LOG_STEP_IN "- Remove qchdcpkprov"
+DELETE_FROM_WORK_DIR "system" "system/bin/qchdcpkprov"
+DELETE_FROM_WORK_DIR "system" "system/bin/dhkprov"
+DELETE_FROM_WORK_DIR "system" "system/etc/init/dhkprov.rc"
+LOG_STEP_OUT

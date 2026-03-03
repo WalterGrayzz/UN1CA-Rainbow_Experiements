@@ -231,6 +231,21 @@ system/etc/permissions/privapp-permissions-com.samsung.android.messaging.xml
 system/priv-app/SamsungMessages
 "
 
+#stuff
+SYSTEM_DEBLOAT+="
+system/app/ARCore
+system/app/ChromeCustomizations
+system/app/EasymodeContactsWidget81
+system/app/EasyOneHand3
+system/app/MoccaMobile
+system/app/ParentalCare
+system/app/SafetyInformation
+system/app/SamsungWeather
+system/app/DRParser
+system/app/SilentLog
+system/priv-app/CIDManager
+"
+
 # Samsung Pass
 SYSTEM_DEBLOAT+="
 system/app/SamsungPassAutofill_v1
