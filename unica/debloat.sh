@@ -71,6 +71,12 @@ system/etc/permissions/privapp-permissions-com.samsung.android.app.updatecenter.
 system/priv-app/AppUpdateCenter
 "
 
+# CIDManager
+SYSTEM_DEBLOAT+="
+system/etc/permissions/privapp-permissions-com.samsung.android.cidmanager.xml
+system/priv-app/CIDManager
+"
+
 # BCService
 SYSTEM_DEBLOAT+="
 system/etc/permissions/privapp-permissions-com.sec.bcservice.xml
