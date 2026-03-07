@@ -1,0 +1,5 @@
+/vendor u:object_r:system_file:s0
+/vendor/firmware u:object_r:system_file:s0
+/vendor/lib64 u:object_r:system_file
+/vendor/lib64/hw u:object_r:system_file
+/vendor/lib64/hw/gatekeeper\.mdfpp\.so
