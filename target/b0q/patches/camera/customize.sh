@@ -6,7 +6,6 @@ system/lib/libSlowShutter_jni.media.samsung.so
 system/lib64/libDualCamBokehCapture.camera.samsung.so
 system/lib64/libFace_Landmark_Engine.camera.samsung.so
 system/lib64/libHREnhancementAPI.camera.samsung.so
-system/lib64/libHpr_RecFace_dl_v1.0.camera.samsung.so
 system/lib64/libImageCropper.camera.samsung.so
 system/lib64/libImageTagger.camera.samsung.so
 system/lib64/libLocalTM_pcc.camera.samsung.so
@@ -26,7 +25,6 @@ system/lib64/libhighres_enhancement.arcsoft.so
 system/lib64/libhumantracking.arcsoft.so
 system/lib64/libhybridHDR_wrapper.camera.samsung.so
 system/lib64/libhybrid_high_dynamic_range.arcsoft.so
-system/lib64/libsaiv_HprFace_cmh_support_jni.camera.samsung.so
 system/lib64/libsamsung_videoengine_9_0.so
 system/lib64/libsuperresolution_raw.arcsoft.so
 system/lib64/libsuperresolutionraw_wrapper_v2.camera.samsung.so

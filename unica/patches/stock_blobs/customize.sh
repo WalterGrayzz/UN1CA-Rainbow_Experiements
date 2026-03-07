@@ -87,11 +87,10 @@ ADD_TO_WORK_DIR "$SOURCE_FIRMWARE" "system" "system/saiv/textrecognition" 0 0 75
 
 if [ -f "$FW_DIR/$TARGET_FIRMWARE_PATH/system/system/usr/share/alsa/alsa.conf" ]; then
     ADD_TO_WORK_DIR "$TARGET_FIRMWARE" "system" "system/usr/share/alsa/alsa.conf" 0 0 644 "u:object_r:system_file:s0"
-else
+fi
     if [ -d "$WORK_DIR/system/system/usr/share/alsa" ]; then
         DELETE_FROM_WORK_DIR "system" "system/usr/share/alsa"
     fi
-fi
 
 unset TARGET_FIRMWARE_PATH
 unset -f MATCH_TARGET_FEATURES
