@@ -18,3 +18,11 @@ ro.config.dmverity=N
 
 # Disable Knox Matrix AI Privacy
 ro.security.ai.privacy=
+
+# Remove ICCC prop
+ro.config.iccc_version=
+
+# Disable HDCP in WFD
+wlan.wfd.hdcp=disable
+
+
