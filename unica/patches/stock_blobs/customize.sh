@@ -16,7 +16,7 @@ MATCH_TARGET_FEATURES()
     done
     for f in $TARGET_FEATURES; do
         if ! grep -q "$f" <<< "$SOURCE_FEATURES"; then
-            ADD_TO_WORK_DIR "b0q85xxx" "system" "system/etc/permissions/$f" 0 0 644 "u:object_r:system_file:s0"
+            ADD_TO_WORK_DIR "$TARGET_FIRMWARE" "system" "system/etc/permissions/$f" 0 0 644 "u:object_r:system_file:s0"
         fi
     done
 }
@@ -27,9 +27,9 @@ TARGET_FIRMWARE_PATH="$(cut -d "/" -f 1 -s <<< "$TARGET_FIRMWARE")_$(cut -d "/" 
 MATCH_TARGET_FEATURES
 
 if [ -d "$FW_DIR/$TARGET_FIRMWARE_PATH/system/system/etc/saiv" ]; then
-    ADD_TO_WORK_DIR "b0q85xxx" "system" \
+    ADD_TO_WORK_DIR "$TARGET_FIRMWARE" "system" \
         "system/etc/saiv/image_understanding/db/aic_classifier/aic_classifier_cnn.info" 0 0 644 "u:object_r:system_file:s0"
-    ADD_TO_WORK_DIR "b0q85xxx" "system" \
+    ADD_TO_WORK_DIR "$TARGET_FIRMWARE" "system" \
         "system/etc/saiv/image_understanding/db/aic_detector/aic_detector_cnn.info" 0 0 644 "u:object_r:system_file:s0"
 else
     if [ -d "$WORK_DIR/system/system/etc/saiv" ]; then
@@ -51,10 +51,6 @@ if [ -f "$WORK_DIR/system/system/lib64/extractors/libsdsfextractor.so" ] && \
     DELETE_FROM_WORK_DIR "system" "system/lib64/extractors/libsdsfextractor.so"
 fi
 
-ADD_TO_WORK_DIR "b0q85xxx" "system" "system/media/bootsamsung.qmg" 0 0 644 "u:object_r:system_file:s0"
-ADD_TO_WORK_DIR "b0q85xxx" "system" "system/media/bootsamsungloop.qmg" 0 0 644 "u:object_r:system_file:s0"
-ADD_TO_WORK_DIR "b0q85xxx" "system" "system/media/shutdown.qmg" 0 0 644 "u:object_r:system_file:s0"
-
 if [ -f "$FW_DIR/$TARGET_FIRMWARE_PATH/system/system/priv-app/SohService/SohService.apk" ]; then
     DECODE_APK "system" "system/priv-app/SohService/SohService.apk"
 
@@ -68,7 +64,7 @@ else
 fi
 
 DELETE_FROM_WORK_DIR "system" "system/saiv"
-ADD_TO_WORK_DIR "b0q85xxx" "system" "system/saiv" 0 0 755 "u:object_r:system_file:s0"
+ADD_TO_WORK_DIR "$TARGET_FIRMWARE" "system" "system/saiv" 0 0 755 "u:object_r:system_file:s0"
 if [[ "$(GET_FLOATING_FEATURE_CONFIG "SEC_FLOATING_FEATURE_CAMERA_DOCUMENTSCAN_SOLUTIONS")" == *"AI_DEWARPING"* ]]; then
     ADD_TO_WORK_DIR "$SOURCE_FIRMWARE" \
         "system" "system/saiv/image_understanding/db/smartscan_rectifier" 0 0 755 "u:object_r:system_file:s0"
@@ -86,11 +82,12 @@ DELETE_FROM_WORK_DIR "system" "system/saiv/textrecognition"
 ADD_TO_WORK_DIR "$SOURCE_FIRMWARE" "system" "system/saiv/textrecognition" 0 0 755 "u:object_r:system_file:s0"
 
 if [ -f "$FW_DIR/$TARGET_FIRMWARE_PATH/system/system/usr/share/alsa/alsa.conf" ]; then
-    ADD_TO_WORK_DIR "b0q85xxx" "system" "system/usr/share/alsa/alsa.conf" 0 0 644 "u:object_r:system_file:s0"
-fi
+    ADD_TO_WORK_DIR "$TARGET_FIRMWARE" "system" "system/usr/share/alsa/alsa.conf" 0 0 644 "u:object_r:system_file:s0"
+else
     if [ -d "$WORK_DIR/system/system/usr/share/alsa" ]; then
         DELETE_FROM_WORK_DIR "system" "system/usr/share/alsa"
     fi
+fi
 
 unset TARGET_FIRMWARE_PATH
 unset -f MATCH_TARGET_FEATURES
