@@ -15,7 +15,7 @@ PATCH_FSTAB()
             continue
         fi
         sed -E -i \
-            '/^(system|vendor|product|system_ext|odm|vendor_dlkm|odm_dlkm|system_dlkm)\s+/ s/(\s+\S+\s+)\S+/\1erofs/' \
+            '/^(system|vendor|product|system_ext|odm|vendor_dlkm|odm_dlkm|system_dlkm)\s+/ s/(\s+\S+\s+)\S+/\1ext4/' \
             "$f" && LOG "- Patching $(sed -e "s|$WORK_DIR||g" -e "s|$TMP_DIR/out/ramdisk_extracted|$BOOT_FILE|g" <<< "$f")" \
             || true
         EVAL "uniq \"$f\" \"$TMP_DIR/tmp\" && mv -f \"$TMP_DIR/tmp\" \"$f\""
@@ -23,8 +23,8 @@ PATCH_FSTAB()
 }
 # ]
 
-if [[ "$TARGET_OS_FILE_SYSTEM_TYPE" != "erofs" ]]; then
-    _LOG "TARGET_OS_FILE_SYSTEM_TYPE is not set to erofs"
+if [[ "$TARGET_OS_FILE_SYSTEM_TYPE" != "ext4" ]]; then
+    _LOG "TARGET_OS_FILE_SYSTEM_TYPE is not set to ext4"
     unset -f _LOG
     return 0
 fi
