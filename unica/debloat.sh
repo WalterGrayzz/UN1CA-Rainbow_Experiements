@@ -240,7 +240,6 @@ system/app/EasyOneHand3
 system/app/MoccaMobile
 system/app/ParentalCare
 system/app/SafetyInformation
-system/app/SamsungWeather
 system/app/DRParser
 system/app/SilentLog
 system/priv-app/CIDManager

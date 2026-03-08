@@ -10,7 +10,6 @@ FORCE=false
 FIRMWARES=()
 MODEL=""
 CSC=""
-LATEST_FIRMWARE=""
 DOWNLOADED_FIRMWARE=""
 BL_TAR=""
 AP_TAR=""
@@ -348,12 +347,6 @@ PREPARE_SCRIPT "$@"
 
 for i in "${FIRMWARES[@]}"; do
     PARSE_FIRMWARE_STRING "$i" || exit 1
-
-    LATEST_FIRMWARE="$(GET_LATEST_FIRMWARE "$MODEL" "$CSC")"
-    if [ ! "$LATEST_FIRMWARE" ]; then
-        LOGE "Latest available firmware could not be fetched"
-        exit 1
-    fi
 
     LOG_STEP_IN "- Processing $MODEL firmware with $CSC CSC"
     LOG "- Downloaded firmware: $(cat "$ODIN_DIR/${MODEL}_${CSC}/.downloaded" 2> /dev/null)"
