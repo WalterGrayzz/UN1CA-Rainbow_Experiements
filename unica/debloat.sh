@@ -77,6 +77,11 @@ system/etc/permissions/privapp-permissions-com.sec.bcservice.xml
 system/priv-app/BCService
 "
 
+#Optics
+OPTICS_DEBLOAT+="
+configs
+"
+
 # Gaming Hub
 SYSTEM_DEBLOAT+="
 system/etc/permissions/privapp-permissions-com.samsung.android.game.gamehome.xml
@@ -180,6 +185,16 @@ system/etc/sysconfig/preinstalled-packages-com.mygalaxy.service.xml
 system/priv-app/MyGalaxyService
 "
 
+#Prism Debloat
+PRISM_DEBLOAT+="
+app
+etc
+HWRDB
+preload
+priv-app
+sipdb
+"
+
 # Samsung Analytics
 SYSTEM_DEBLOAT+="
 system/app/DsmsAPK
@@ -201,6 +216,7 @@ system/etc/permissions/privapp-permissions-com.sec.android.mimage.avatarstickers
 system/etc/permissions/signature-permissions-com.sec.android.mimage.avatarstickers.xml
 system/priv-app/AREmojiEditor
 system/priv-app/AvatarEmojiSticker
+system/priv-app/AREmoji
 "
 
 # Samsung Calendar
@@ -243,6 +259,9 @@ system/app/SafetyInformation
 system/app/DRParser
 system/app/SilentLog
 system/priv-app/CIDManager
+system/priv-app/StickerFaceARAvatar
+system/priv-app/SamsungPositioning
+system/priv-app/NetworkDiagnostic
 "
 
 # Samsung Pass
@@ -264,6 +283,13 @@ system/priv-app/SamsungPass
 SYSTEM_DEBLOAT+="
 system/app/SmartReminder
 "
+
+#Samsung Kids
+SYSTEM_DEBLOAT+="
+system/app/KidsHome_Installer
+system/etc/permissions/signature-permissions-com.sec.android.app.kidshome.xml
+"
+
 
 # Samsung Visit In
 SYSTEM_DEBLOAT+="
@@ -291,6 +317,7 @@ system/priv-app/SamsungCarKeyFw
 SYSTEM_EXT_DEBLOAT+="
 framework/org.carconnectivity.android.digitalkey.rangingintent.jar
 framework/org.carconnectivity.android.digitalkey.secureelement.jar
+priv-app/AvatarPicker
 "
 
 # Search engine selector

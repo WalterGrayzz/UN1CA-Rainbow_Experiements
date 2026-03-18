@@ -1,4 +1,4 @@
-id=ext4
-name=EXT4 support
+id=EroFS
+name=EroFS support
 author=salvogiangri, utkustnr, WalterGrayz
-description=Adds EXT4 support.
+description=Adds EroFS support.
