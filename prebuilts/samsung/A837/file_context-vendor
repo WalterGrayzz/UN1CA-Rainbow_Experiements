@@ -50,6 +50,8 @@
 /vendor/lib/hw u:object_r:vendor_file:s0
 /vendor/lib/hw/vulkan\.adreno\.so u:object_r:vendor_file:s0
 /vendor/lib/libCB\.so u:object_r:vendor_file:s0
+/vendor/lib/libEGL_adreno\.so u:object_r:vendor_file:s0
+/vendor/lib/libGLESv2_adreno\.so u:object_r:vendor_file:s0
 /vendor/lib/libOpenCL\.so u:object_r:vendor_file:s0
 /vendor/lib/libOpenCL_adreno\.so u:object_r:vendor_file:s0
 /vendor/lib/libadreno_app_profiles\.so u:object_r:vendor_file:s0
@@ -64,6 +66,7 @@
 /vendor/lib/libllvm-qcom\.so u:object_r:vendor_file:s0
 /vendor/lib/libllvm-qgl\.so u:object_r:vendor_file:s0
 /vendor/lib/libmemunreachable\.so u:object_r:vendor_file:s0
+/vendor/lib/libq3dtools_adreno\.so u:object_r:vendor_file:s0
 /vendor/lib64 u:object_r:vendor_file:s0
 /vendor/lib64/egl u:object_r:vendor_file:s0
 /vendor/lib64/egl/eglSubDriverAndroid\.so u:object_r:vendor_file:s0
@@ -79,6 +82,8 @@
 /vendor/lib64/hw u:object_r:vendor_file:s0
 /vendor/lib64/hw/vulkan\.adreno\.so u:object_r:vendor_file:s0
 /vendor/lib64/libCB\.so u:object_r:vendor_file:s0
+/vendor/lib64/libEGL_adreno\.so u:object_r:vendor_file:s0
+/vendor/lib64/libGLESv2_adreno\.so u:object_r:vendor_file:s0
 /vendor/lib64/libOpenCL\.so u:object_r:vendor_file:s0
 /vendor/lib64/libOpenCL_adreno\.so u:object_r:vendor_file:s0
 /vendor/lib64/libadreno_app_profiles\.so u:object_r:vendor_file:s0
@@ -93,3 +98,4 @@
 /vendor/lib64/libllvm-qcom\.so u:object_r:vendor_file:s0
 /vendor/lib64/libllvm-qgl\.so u:object_r:vendor_file:s0
 /vendor/lib64/libmemunreachable\.so u:object_r:vendor_file:s0
+/vendor/lib64/libq3dtools_adreno\.so u:object_r:vendor_file:s0
