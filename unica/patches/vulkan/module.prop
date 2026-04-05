@@ -1,6 +1,5 @@
-id=adreno
-name=Adreno Driver
-version=v819.0.2
-versionCode=81902
-author=frax3r
-description=V@0819.0.2 (GIT@651341e91d, I8d46b3bbb7, 1754290135) (Date:08/04/25) / QCOM Profiler v814 / META 81.0.0.997.516.807950146
+id=adreno_vk_gpu_driver
+name=Adreno™ GPU Driver / Vulkan
+version=v2.2
+author=t.me/adrenolaboratory ()tg@ortooom
+description=Reach the potential of your GPU Adreno! / Vulkan of V@0837.0.6 from Qualcomm®

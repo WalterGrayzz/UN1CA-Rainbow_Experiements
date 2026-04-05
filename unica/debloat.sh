@@ -97,6 +97,11 @@ PRODUCT_DEBLOAT+="
 app/BardShell
 "
 
+# Google Messages
+PRODUCT_DEBLOAT+="
+priv-app/Messages
+"
+
 # Gmail
 PRODUCT_DEBLOAT+="
 app/Gmail2
@@ -225,9 +230,9 @@ system/app/SamsungCalendar
 "
 
 # Samsung Clock
-SYSTEM_DEBLOAT+="
-system/app/ClockPackage
-"
+#SYSTEM_DEBLOAT+="
+#system/app/ClockPackage
+#"
 
 # Samsung Free
 SYSTEM_DEBLOAT+="
@@ -238,13 +243,6 @@ system/app/MinusOnePage
 SYSTEM_DEBLOAT+="
 system/etc/permissions/signature-permissions-com.samsung.android.offline.languagemodel.xml
 system/priv-app/OfflineLanguageModel_stub
-"
-
-# Samsung Messages
-SYSTEM_DEBLOAT+="
-system/etc/default-permissions/default-permissions-com.samsung.android.messaging.xml
-system/etc/permissions/privapp-permissions-com.samsung.android.messaging.xml
-system/priv-app/SamsungMessages
 "
 
 #stuff
