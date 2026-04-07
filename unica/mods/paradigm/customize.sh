@@ -5,23 +5,6 @@ if [ ! "$(GET_PROP "system" "ro.unica.codename")" ]; then
     unset ROM_CODENAME
 fi
 
-# 2026 Audio Pack
-LOG_STEP_IN "- Adding 2026 Audio Pack"
-DELETE_FROM_WORK_DIR "system" "system/hidden/INTERNAL_SDCARD/Music/Samsung/Over_the_Horizon.mp3"
-ADD_TO_WORK_DIR "m3qxxx" "system" \
-    "system/hidden/INTERNAL_SDCARD/Music/Samsung/Over_the_Horizon.m4a" 0 0 644 "u:object_r:system_file:s0"
-DELETE_FROM_WORK_DIR "system" "system/media/audio/notifications"
-DELETE_FROM_WORK_DIR "system" "system/media/audio/ringtones"
-ADD_TO_WORK_DIR "m3qxxx" "system" "system/etc/ringtones_count_list.txt" 0 0 644 "u:object_r:system_file:s0"
-ADD_TO_WORK_DIR "m3qxxx" "system" "system/media/audio/notifications" 0 0 755 "u:object_r:system_file:s0"
-ADD_TO_WORK_DIR "m3qxxx" "system" "system/media/audio/ringtones" 0 0 755 "u:object_r:system_file:s0"
-SET_PROP "vendor" "ro.config.ringtone" "ACH_Galaxy_Bells.ogg"
-SET_PROP "vendor" "ro.config.notification_sound" "ACH_Brightline.ogg"
-SET_PROP "vendor" "ro.config.alarm_alert" "ACH_Morning_Xylophone.ogg"
-SET_PROP "vendor" "ro.config.media_sound" "Media_preview_Over_the_horizon.ogg"
-SET_PROP "vendor" "ro.config.ringtone_2" "ACH_Over_the_Horizon_2026.ogg"
-SET_PROP "vendor" "ro.config.notification_sound_2" "ACH_Alpha.ogg"
-
 # Set AI Version to 20261 (latest)
 SET_FLOATING_FEATURE_CONFIG "SEC_FLOATING_FEATURE_COMMON_CONFIG_AI_VERSION" "20261"
 ADD_TO_WORK_DIR "m3qxxx" "system" "system/app/SketchBook/SketchBook.apk" 0 0 644 "u:object_r:system_file:s0"
