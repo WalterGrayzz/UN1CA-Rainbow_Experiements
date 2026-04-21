@@ -178,7 +178,7 @@ PREPARE_SCRIPT "$@"
 
 if [ ! "$FRAMEWORK_TAG" ]; then
     LOGE "Work dir needs to be set up before using this script"
-    exit 1
+    #exit 1
 elif [ ! -f "$FRAMEWORK_DIR/1-$FRAMEWORK_TAG.apk" ]; then
     LOGW "framework-res.apk for \"$FRAMEWORK_TAG\" not found, installing"
     EVAL "apktool if -p \"$FRAMEWORK_DIR\" -t \"$FRAMEWORK_TAG\" \"$WORK_DIR/system/system/framework/framework-res.apk\"" || exit 1
