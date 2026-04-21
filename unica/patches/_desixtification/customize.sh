@@ -91,5 +91,18 @@ LOG_STEP_OUT
 SET_PROP "vendor" "ro.vendor.nfc.info.antpos" "29"
 
 #WIFI
+ADD_TO_WORK_DIR "$TARGET_FIRMWARE" "system" "system/framework/semwifi-service.jar"
+ADD_TO_WORK_DIR "$TARGET_FIRMWARE" "system" "system/apex/com.android.wifi.capex"
+ADD_TO_WORK_DIR "$TARGET_FIRMWARE" "system" "system/bin/wificond"
+ADD_TO_WORK_DIR "$TARGET_FIRMWARE" "system" "system/bin/insthk"
+ADD_TO_WORK_DIR "$TARGET_FIRMWARE" "system" "system/bin/remotedisplay"
+ADD_TO_WORK_DIR "$TARGET_FIRMWARE" "system" "system/lib64/libwifi-system-iface.so"
+ADD_TO_WORK_DIR "$TARGET_FIRMWARE" "system" "system/lib64/libremotedisplay_wfd.so"
+ADD_TO_WORK_DIR "$TARGET_FIRMWARE" "system" "system/lib64/vendor.samsung.hardware.security.hdcp.wifidisplay-V2-ndk.so"
+ADD_TO_WORK_DIR "$TARGET_FIRMWARE" "system" "system/lib64/libremotedisplayservice.so"
+ADD_TO_WORK_DIR "$TARGET_FIRMWARE" "system" "system/lib64/libwifipackettrackerjni.so"
+ADD_TO_WORK_DIR "$TARGET_FIRMWARE" "system" "system/lib64/wfd_log.so"
+ADD_TO_WORK_DIR "$TARGET_FIRMWARE" "system" "system/lib64/libsecuibc.so"
+
 
 
