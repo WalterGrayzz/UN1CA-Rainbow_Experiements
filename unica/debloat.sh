@@ -260,6 +260,9 @@ system/priv-app/CIDManager
 system/priv-app/StickerFaceARAvatar
 system/priv-app/SamsungPositioning
 system/priv-app/NetworkDiagnostic
+system/priv-app/SPPPushClient
+system/priv-app/SOAgent77
+system/priv-app/GameDriver-SM8550
 "
 
 # Samsung Pass
@@ -371,30 +374,4 @@ system/etc/sysconfig/feature-a11y-preload-voacc.xml
 # YouTube
 PRODUCT_DEBLOAT+="
 app/YouTube
-"
-
-# system_ext clean-up
-SYSTEM_EXT_DEBLOAT+="
-app/QCC
-bin/qccsyshal@1.2-service
-etc/init/vendor.qti.hardware.qccsyshal@1.2-service.rc
-lib/libqcc.so
-lib/libqcc_file_agent_sys.so
-lib/libqccdme.so
-lib/libqccfileservice.so
-lib/vendor.qti.hardware.qccsyshal@1.0.so
-lib/vendor.qti.hardware.qccsyshal@1.1.so
-lib/vendor.qti.hardware.qccsyshal@1.2.so
-lib/vendor.qti.hardware.qccvndhal@1.0.so
-lib/vendor.qti.qccvndhal_aidl-V1-ndk.so
-lib64/libqcc.so
-lib64/libqcc_file_agent_sys.so
-lib64/libqccdme.so
-lib64/libqccfileservice.so
-lib64/vendor.qti.hardware.qccsyshal@1.0.so
-lib64/vendor.qti.hardware.qccsyshal@1.1.so
-lib64/vendor.qti.hardware.qccsyshal@1.2-halimpl.so
-lib64/vendor.qti.hardware.qccsyshal@1.2.so
-lib64/vendor.qti.hardware.qccvndhal@1.0.so
-lib64/vendor.qti.qccvndhal_aidl-V1-ndk.so
 "

@@ -25,6 +25,5 @@ SET_PROP "product" "ro.gfx.driver.1" "$(GET_PROP "$WORK_DIR/vendor/build.prop" "
 ADD_TO_WORK_DIR "$TARGET_FIRMWARE_PATH" "system" "system/framework/ssrm.jar" 0 0 644 "u:object_r:system_file:s0"
 ADD_TO_WORK_DIR "$TARGET_FIRMWARE_PATH" "system" "system/priv-app/SamsungDeviceHealthManagerService/SamsungDeviceHealthManagerService.apk" 0 0 644 "u:object_r:system_file:s0"
 ADD_TO_WORK_DIR "$TARGET_FIRMWARE_PATH" "system" "system/apex/com.android.bt.apex" 0 0 644 "u:object_r:system_file:s0"
-ADD_TO_WORK_DIR "$TARGET_FIRMWARE_PATH" "system_ext" "bin/qcrosvm" 0 0 644 "u:object_r:system_file:s0"
 
 

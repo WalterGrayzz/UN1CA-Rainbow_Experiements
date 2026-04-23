@@ -38,3 +38,8 @@ ADD_TO_WORK_DIR "m3qxxx" "system" "system/media/bootsamsungloop.qmg"
 ADD_TO_WORK_DIR "m3qxxx" "system" "system/media/shutdown.qmg"
 LOG_STEP_OUT
 
+#fix dm3q buggies
+ADD_TO_WORK_DIR "$SOURCE_FIRMWARE" "system_ext" "lib64/libqcc_file_agent_sys.so"
+ADD_TO_WORK_DIR "$SOURCE_FIRMWARE" "system_ext" "lib/libqcc_file_agent_sys.so"
+
+
