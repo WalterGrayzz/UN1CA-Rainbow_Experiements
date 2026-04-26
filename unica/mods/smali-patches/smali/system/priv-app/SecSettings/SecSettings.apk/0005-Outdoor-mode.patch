@@ -1,0 +1,18 @@
+diff '--color=auto' -urN SecSettingsOrig.apk/smali_classes5/com/samsung/android/settings/display/controller/SecOutDoorModePreferenceController.smali SecSettings.apk/smali_classes5/com/samsung/android/settings/display/controller/SecOutDoorModePreferenceController.smali
+--- SecSettingsOrig.apk/smali_classes5/com/samsung/android/settings/display/controller/SecOutDoorModePreferenceController.smali	2026-04-26 18:09:22.193688251 +0400
++++ SecSettings.apk/smali_classes5/com/samsung/android/settings/display/controller/SecOutDoorModePreferenceController.smali	2026-04-26 18:11:20.260781555 +0400
+@@ -61,13 +61,7 @@
+ .method public final isAvailable()Z
+     .locals 0
+ 
+-    iget-object p0, p0, Lcom/android/settingslib/core/AbstractPreferenceController;->mContext:Landroid/content/Context;
+-
+-    invoke-static {p0}, Lcom/samsung/android/settings/Rune;->supportAutoBrightness(Landroid/content/Context;)Z
+-
+-    move-result p0
+-
+-    xor-int/lit8 p0, p0, 0x1
++    const/4 p0, 0x1
+ 
+     return p0
+ .end method
