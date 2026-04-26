@@ -1,0 +1,33 @@
+diff -urN SecSettingsOrig.apk/smali_classes5/com/samsung/android/settings/deviceinfo/batteryinfo/BatteryRegulatoryPreferenceController.smali SecSettings.apk/smali_classes5/com/samsung/android/settings/deviceinfo/batteryinfo/BatteryRegulatoryPreferenceController.smali
+--- SecSettingsOrig.apk/smali_classes5/com/samsung/android/settings/deviceinfo/batteryinfo/BatteryRegulatoryPreferenceController.smali	2026-04-26 02:29:44.861099957 +0400
++++ SecSettings.apk/smali_classes5/com/samsung/android/settings/deviceinfo/batteryinfo/BatteryRegulatoryPreferenceController.smali	2026-04-26 02:44:42.415649034 +0400
+@@ -164,7 +164,7 @@
+ 
+     move-result-object v0
+ 
+-    const-string v1, "SM-A236B"
++    const-string v1, "SM-S918B"
+ 
+     invoke-virtual {v1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+ 
+diff -urN SecSettingsOrig.apk/smali_classes5/com/samsung/android/settings/deviceinfo/batteryinfo/SecBatteryInfoFragment.smali SecSettings.apk/smali_classes5/com/samsung/android/settings/deviceinfo/batteryinfo/SecBatteryInfoFragment.smali
+--- SecSettingsOrig.apk/smali_classes5/com/samsung/android/settings/deviceinfo/batteryinfo/SecBatteryInfoFragment.smali	2026-04-26 02:29:44.861653994 +0400
++++ SecSettings.apk/smali_classes5/com/samsung/android/settings/deviceinfo/batteryinfo/SecBatteryInfoFragment.smali	2026-04-26 02:45:38.566851608 +0400
+@@ -227,7 +227,7 @@
+ 
+     move-result-object v0
+ 
+-    const-string v1, "SM-A236B"
++    const-string v1, "SM-S918B"
+ 
+     invoke-virtual {v1, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+ 
+@@ -375,7 +375,7 @@
+ 
+     move-result-object v0
+ 
+-    const-string v2, "SM-A236B"
++    const-string v2, "SM-S918B"
+ 
+     invoke-virtual {v2, v0}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+ 

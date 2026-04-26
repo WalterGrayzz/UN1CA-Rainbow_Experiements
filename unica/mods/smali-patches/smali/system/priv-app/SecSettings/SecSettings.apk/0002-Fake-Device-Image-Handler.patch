@@ -1,0 +1,22 @@
+commit 4c30f69edee5aa965d7b98a737986c01999923f9
+Author: tisenu100 <tisenu100@github.com>
+Date:   Fri Dec 13 16:26:29 2024 +0200
+Subject: [PATCH] Fake Device Image Handler
+
+diff --git a/smali_classes5/com/samsung/android/settings/deviceinfo/aboutphone/DeviceImageManager$1.smali b/smali_classes5/com/samsung/android/settings/deviceinfo/aboutphone/DeviceImageManager$1.smali
+index 4fcfcf8e..9b05bbba 100644
+--- a/smali_classes5/com/samsung/android/settings/deviceinfo/aboutphone/DeviceImageManager$1.smali
++++ b/smali_classes5/com/samsung/android/settings/deviceinfo/aboutphone/DeviceImageManager$1.smali
+@@ -158,11 +158,7 @@
+ 
+     if-eqz v2, :cond_3
+ 
+-    const-string/jumbo v0, "ril.product_code"
+-
+-    invoke-static {v0}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
+-
+-    move-result-object v0
++    const-string/jumbo v0, "SM-S908EZKHMEA"
+ 
+     const-string/jumbo v2, "requestPki - model_code = "
+ 

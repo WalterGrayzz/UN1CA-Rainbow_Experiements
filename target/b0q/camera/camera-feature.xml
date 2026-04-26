@@ -69,6 +69,7 @@
     <!-- Recording resolution - BACK -->
     <local name="BACK_CAMERA_RECORDING_DEFAULT_RESOLUTION" value="1920x1080"/>
     <local name="BACK_CAMERA_RECORDING_MIN_RESOLUTION" value="1280x720"/>
+    <local name="BACK_CAMCORDER_RESOLUTION_FEATURE_MAP_7680X4320" value="true" hdr="true" hdr10="false" snapshot-support="true" snapshot-size="4000x2252" vdis="true" super-vdis="false" effect="false" object-tracking="false" seamless-zoom-support="false" physical-zoom-supported="false" external-storage-support="false" touch-af="true" supported-mode="video,pro_video"/>
     <local name="BACK_CAMCORDER_RESOLUTION_FEATURE_MAP_7680X4320_24FPS" value="true" hdr="true" hdr10="false" snapshot-support="true" snapshot-size="4000x2252" vdis="true" super-vdis="false" effect="false" object-tracking="false" seamless-zoom-support="false" physical-zoom-supported="false" external-storage-support="false" touch-af="true" supported-mode="video,pro_video"/>
     <local name="BACK_CAMCORDER_RESOLUTION_FEATURE_MAP_3840X2160" value="true" hdr="true" hdr10="true" snapshot-support="true" snapshot-size="4000x2252" vdis="true" super-vdis="false" effect="false" object-tracking="true" seamless-zoom-support="true" physical-zoom-supported="false" external-storage-support="true" touch-af="true" supported-mode="video,pro_video"/>
     <local name="BACK_CAMCORDER_RESOLUTION_FEATURE_MAP_3840X2160_60FPS" value="true" hdr="true" hdr10="false" snapshot-support="true" snapshot-size="4000x2252" vdis="true" super-vdis="false" effect="false" object-tracking="true" seamless-zoom-support="false" physical-zoom-supported="true" external-storage-support="false" touch-af="true" supported-mode="video,pro_video"/>
@@ -289,10 +290,15 @@
 
     <local name="SUPPORT_QUICK_VIEW_SCALE_VI" value="true"/>
 
+    <local name="SUPPORT_LOG_VIDEO" value="true"/>
+
     <!-- camera assistant features -->
     <local name="SUPPORT_CAMERA_ASSISTANT" value="true"/>
+    <local name="SUPPORT_CAMERA_ASSISTANT_ADAPTIVE_PIXEL" value="true"/>
     <local name="SUPPORT_CAMERA_ASSISTANT_AUDIO_MONITORING" value="true"/>
     <local name="SUPPORT_CAMERA_ASSISTANT_AUTO_LENS_SWITCHING" value="true"/>
+    <local name="SUPPORT_CAMERA_ASSISTANT_CROP_ZOOM_X2" value="true"/>
+    <local name="SUPPORT_CAMERA_ASSISTANT_DIGITAL_ZOOM_UPSCALE" value="true"/>
     <local name="SUPPORT_CAMERA_ASSISTANT_ZOOM_X100" value="true"/>
     <local name="SUPPORT_CAMERA_ASSISTANT_OPTICAL_IMAGE_STABILIZATION" value="true"/>
     <local name="SUPPORT_CAMERA_ASSISTANT_ADDITIONAL_MODE_SINGLE_TAKE" value="true"/>
@@ -301,4 +307,7 @@
     <local name="SUPPORT_CAMERA_ASSISTANT_TILTA_WIRELESS_LENS_CONTROLLER" value="true"/>
     <local name="SUPPORT_CAMERA_ASSISTANT_PRO_MODE_PRESETS" value="true"/>
     <local name="SUPPORT_CAMERA_ASSISTANT_CUSTOMIZE_INDICATORS" value="true"/>
+
+    <!-- default value feature -->
+    <local name="DEFAULT_DIGITAL_ZOOM_UPSCALE" value="true"/>
 </resources>

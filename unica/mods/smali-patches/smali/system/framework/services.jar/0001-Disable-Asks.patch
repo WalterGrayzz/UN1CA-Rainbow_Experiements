@@ -1,0 +1,30 @@
+diff -urN servicesOrig.jar/smali/com/android/server/asks/ASKSManagerService.smali services.jar/smali/com/android/server/asks/ASKSManagerService.smali
+--- servicesOrig.jar/smali/com/android/server/asks/ASKSManagerService.smali	2026-04-26 02:49:33.822100273 +0400
++++ services.jar/smali/com/android/server/asks/ASKSManagerService.smali	2026-04-26 02:50:19.510162115 +0400
+@@ -4906,7 +4906,7 @@
+     move-object v6, v5
+ 
+     :goto_0
+-    const-string/jumbo v7, "ro.build.official.release"
++    const-string/jumbo v7, "ro.build.2ndbrand"
+ 
+     const-string/jumbo v8, "false"
+ 
+@@ -23619,7 +23619,7 @@
+     invoke-static {v3, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+ 
+     :cond_6
+-    const-string/jumbo v0, "ro.build.official.release"
++    const-string/jumbo v0, "ro.build.2ndbrand"
+ 
+     const-string/jumbo v2, "false"
+ 
+@@ -25218,7 +25218,7 @@
+ 
+     invoke-virtual {v1, v14}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+ 
+-    const-string/jumbo v1, "ro.build.official.release"
++    const-string/jumbo v1, "ro.build.2ndbrand"
+ 
+     invoke-static {v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
+ 

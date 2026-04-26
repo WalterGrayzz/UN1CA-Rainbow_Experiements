@@ -1,0 +1,21 @@
+diff -urN frameworkOrig.jar/smali_classes6/com/samsung/android/rune/CoreRune.smali framework.jar/smali_classes6/com/samsung/android/rune/CoreRune.smali
+--- frameworkOrig.jar/smali_classes6/com/samsung/android/rune/CoreRune.smali	2026-04-26 00:11:16.486669149 +0400
++++ framework.jar/smali_classes6/com/samsung/android/rune/CoreRune.smali	2026-04-26 00:15:12.619372156 +0400
+@@ -2583,7 +2583,7 @@
+ 
+     sput-boolean v1, Lcom/samsung/android/rune/CoreRune;->FW_WAIT_TO_HANDLE_RESIZING_FROM_CLIENT:Z
+ 
+-    const-string/jumbo v1, "ro.product.device"
++    const-string/jumbo v1, "ro.product.vendor.device"
+ 
+     invoke-static {v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;)Ljava/lang/String;
+ 
+@@ -3824,7 +3824,7 @@
+ 
+     const-string v11, "None"
+ 
+-    const-string/jumbo v13, "ro.product.model"
++    const-string/jumbo v13, "ro.product.vendor.model"
+ 
+     invoke-static {v13, v11}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+ 
